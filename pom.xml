@@ -9,14 +9,6 @@
 
   <name>hola-mundo</name>
   <url>http://ribera.claro.amx:8081/artifactory/virtual-itec/</url>
-  <mirrors>
-    <mirror>
-      <mirrorOf>*</mirrorOf>
-      <name>virtual-itec</name>
-      <url>http://10.92.78.62:8081/artifactory/virtual-itec</url>
-      <id>virtual-itec</id>
-    </mirror>
-  </mirrors>
   <profiles>
     <profile>
       <repositories>
