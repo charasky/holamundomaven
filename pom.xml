@@ -9,12 +9,38 @@
 
   <name>hola-mundo</name>
   <url>http://ribera.claro.amx:8081/artifactory/virtual-itec/</url>
-  <repositories>
+<repositories>
     <repository>
-      <id>my-internal-site</id>
-      <url>http://ribera.claro.amx:8081/artifactory/virtual-itec</url>
+        <id>central</id>
+        <url>http://ribera.claro.amx:8081/artifactory/libs-release</url>
+        <snapshots>
+            <enabled>false</enabled>
+        </snapshots>
     </repository>
-  </repositories>
+    <repository>
+        <id>snapshots</id>
+        <url>http://ribera.claro.amx:8081/artifactory/libs-snapshot</url>
+        <releases>
+            <enabled>false</enabled>
+        </releases>
+    </repository>
+</repositories>
+<pluginRepositories>
+    <pluginRepository>
+        <id>central</id>
+        <url>http://ribera.claro.amx:8081/artifactory/plugins-release</url>
+        <snapshots>
+            <enabled>false</enabled>
+        </snapshots>
+    </pluginRepository>
+    <pluginRepository>
+        <id>snapshots</id>
+        <url>http://ribera.claro.amx:8081/artifactory/plugins-snapshot</url>
+        <releases>
+            <enabled>false</enabled>
+        </releases>
+    </pluginRepository>
+</pluginRepositories>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
