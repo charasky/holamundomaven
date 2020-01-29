@@ -9,38 +9,71 @@
 
   <name>hola-mundo</name>
   <url>http://ribera.claro.amx:8081/artifactory/virtual-itec/</url>
-<repositories>
-    <repository>
-        <id>central</id>
-        <url>http://ribera.claro.amx:8081/artifactory/libs-release</url>
-        <snapshots>
+<?xml version="1.0" encoding="UTF-8"?>
+<settings xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.1.0 http://maven.apache.org/xsd/settings-1.1.0.xsd" xmlns="http://maven.apache.org/SETTINGS/1.1.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <servers>
+    <server>
+      <username>${security.getCurrentUsername()}</username>
+      <password>${security.getEscapedEncryptedPassword()!"*** Insert encrypted password here ***"}</password>
+      <id>central</id>
+    </server>
+    <server>
+      <username>${security.getCurrentUsername()}</username>
+      <password>${security.getEscapedEncryptedPassword()!"*** Insert encrypted password here ***"}</password>
+      <id>snapshots</id>
+    </server>
+  </servers>
+  <mirrors>
+    <mirror>
+      <mirrorOf>*</mirrorOf>
+      <name>virtual-itec</name>
+      <url>http://10.92.78.62:8081/artifactory/virtual-itec</url>
+      <id>virtual-itec</id>
+    </mirror>
+  </mirrors>
+  <profiles>
+    <profile>
+      <repositories>
+        <repository>
+          <snapshots>
             <enabled>false</enabled>
-        </snapshots>
-    </repository>
-    <repository>
-        <id>snapshots</id>
-        <url>http://ribera.claro.amx:8081/artifactory/libs-snapshot</url>
-        <releases>
+          </snapshots>
+          <id>central</id>
+          <name>virtual-itec</name>
+          <url>http://10.92.78.62:8081/artifactory/virtual-itec</url>
+        </repository>
+        <repository>
+          <snapshots />
+          <id>snapshots</id>
+          <name>virtual-itec</name>
+          <url>http://10.92.78.62:8081/artifactory/virtual-itec</url>
+        </repository>
+      </repositories>
+      <pluginRepositories>
+        <pluginRepository>
+          <snapshots>
             <enabled>false</enabled>
-        </releases>
-    </repository>
-</repositories>
-<pluginRepositories>
-    <pluginRepository>
-        <id>central</id>
-        <url>http://ribera.claro.amx:8081/artifactory/plugins-release</url>
-        <snapshots>
-            <enabled>false</enabled>
-        </snapshots>
-    </pluginRepository>
-    <pluginRepository>
-        <id>snapshots</id>
-        <url>http://ribera.claro.amx:8081/artifactory/plugins-snapshot</url>
-        <releases>
-            <enabled>false</enabled>
-        </releases>
-    </pluginRepository>
-</pluginRepositories>
+          </snapshots>
+          <id>central</id>
+          <name>virtual-itec</name>
+          <url>http://10.92.78.62:8081/artifactory/virtual-itec</url>
+        </pluginRepository>
+        <pluginRepository>
+          <snapshots />
+          <id>snapshots</id>
+          <name>virtual-itec</name>
+          <url>http://10.92.78.62:8081/artifactory/virtual-itec</url>
+        </pluginRepository>
+      </pluginRepositories>
+      <id>artifactory</id>
+    </profile>
+  </profiles>
+  <activeProfiles>
+    <activeProfile>artifactory</activeProfile>
+  </activeProfiles>
+</settings>
+
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
