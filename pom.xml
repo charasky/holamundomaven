@@ -9,6 +9,14 @@
 
   <name>hola-mundo</name>
   <url>http://ribera.claro.amx:8081/artifactory/virtual-itec/</url>
+  <mirrors>
+  <mirror>
+    <id>UK</id>
+    <name>UK Central</name>
+    <url>http://ribera.claro.amx:8081/artifactory/virtual-itec</url>
+    <mirrorOf>central</mirrorOf>
+  </mirror>
+</mirrors>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
