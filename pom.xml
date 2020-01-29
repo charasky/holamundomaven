@@ -15,7 +15,7 @@
       <url>http://ribera.claro.amx:8081/artifactory/virtual-itec</url>
     </repository>
   </repositories>
-    <mirrors>
+  <mirrors>
     <mirror>
       <id>Jfrog</id>
       <name>PlanetMirror Interno</name>
