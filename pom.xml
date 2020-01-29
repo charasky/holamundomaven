@@ -15,17 +15,16 @@
       <url>http://ribera.claro.amx:8081/artifactory/virtual-itec</url>
     </repository>
   </repositories>
+    <mirrors>
+    <mirror>
+      <id>Jfrog</id>
+      <name>PlanetMirror Interno</name>
+      <url>http://ribera.claro.amx:8081/artifactory/virtual-itec</url>
+      <mirrorOf>central</mirrorOf>
+    </mirror>
+  </mirrors>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
-
-  <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.11</version>
-      <scope>test</scope>
-    </dependency>
-  </dependencies>
 </project>
