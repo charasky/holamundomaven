@@ -20,8 +20,8 @@
       <url>http://ribera.claro.amx:8081/artifactory/virtual-itec</url>
     </repository>
     <repository>
-      <id>JFrog</id>
-      <name>JFrog</name>
+      <id>Trimix</id>
+      <name>Trimix</name>
       <url>http://ribera.claro.amx:8081/artifactory/virtual-trimix</url>
     </repository>
   </repositories>
