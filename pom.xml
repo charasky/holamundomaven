@@ -16,7 +16,7 @@
   <repositories>
     <repository>
       <id>JFrog</id>
-      <name>JFrog/name>
+      <name>JFrog</name>
       <url>http://ribera.claro.amx:8081/artifactory/virtual-itec</url>
     </repository>
   </repositories>
